@@ -90,24 +90,3 @@ if(toggleBtn && moreSkills){
     toggleBtn.textContent = hidden ? 'Show less (-)' : 'Show more (+)';
   });
 }
-
-// ===============================
-// Visitor Counter (LocalStorage - unique per device)
-// ===============================
-const visitorNumEl = document.getElementById('visitor-num');
-let totalVisitors = localStorage.getItem('totalVisitors');
-
-// زيادة العدد فقط إذا هذا الجهاز لم يزر الصفحة من قبل
-if (!localStorage.getItem('hasVisited')) {
-    totalVisitors = totalVisitors ? parseInt(totalVisitors) : 0;
-    totalVisitors++;
-    localStorage.setItem('totalVisitors', totalVisitors);
-    localStorage.setItem('hasVisited', 'true');
-} else {
-    totalVisitors = totalVisitors ? parseInt(totalVisitors) : 0;
-}
-
-// عرض العدد في الصفحة
-if(visitorNumEl){
-    visitorNumEl.textContent = totalVisitors;
-}
