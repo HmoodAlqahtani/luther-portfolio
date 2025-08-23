@@ -38,11 +38,25 @@
         </div>
       </article>
 
+      <article class="card card--interactive" id="visitor-card">
+  <h2 class="card__title"><i class="fa-solid fa-eye"></i> عدد الزوار</h2>
+  <div class="visitor-content" style="display:flex; align-items:center; gap:12px; font-size:24px; font-weight:700; justify-content:center; padding:12px 0;">
+    <i class="fa-solid fa-eye" style="color:white;"></i>
+    <span id="visitor-num">0</span>
+  </div>
+  <p style="text-align:center; color:var(--muted); font-size:14px;">عدد الأشخاص الذين شاهدوا الصفحة</p>
+</article>
+
+
       <article class="card card--interactive" id="projects-card">
         <h2 class="card__title"><i class="fa-solid fa-diagram-project"></i> مشاريعي</h2>
         <div class="projects-empty">لا يوجد مشاريع حالياً</div>
       </article>
     </section>
+
+    
+
+    
 
     <!-- Middle column: Skills -->
     <section class="column">
@@ -123,6 +137,7 @@
   
   <footer class="site-footer">© 2025 Luther. All rights reserved.</footer>
 
+
   <script src="script.js"></script>
 
   <head>
@@ -138,6 +153,19 @@
   <meta property="og:url" content="https://HmoodAlqahtani.github.io/luther-portfolio/" />
   <meta name="twitter:card" content="summary_large_image" />
 </head>
+
+<script>
+let count = localStorage.getItem('visitorCount') || 0;
+let visited = localStorage.getItem('visitedBefore');
+
+if(!visited){
+    count++;
+    localStorage.setItem('visitorCount', count);
+    localStorage.setItem('visitedBefore', 'true');
+}
+
+document.getElementById('visitor-num').textContent = count;
+</script>
 
 
 </body>
