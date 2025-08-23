@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luther | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="hero">
+      <img class="hero__image" src="assets/header-placeholder.jpg" alt="Luther header image" />
+      <div class="hero__text">
+        <h1 class="hero__name">Luther</h1>
+        <p class="hero__role">Developer</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="layout">
+    <!-- Left column: Discord + Projects -->
+    <section class="column">
+      <article class="card card--interactive" id="discord-card" aria-live="polite">
+        <h2 class="card__title"><i class="fa-brands fa-discord"></i> ديسكورد</h2>
+        <div class="discord">
+          <img id="dc-avatar" class="discord__avatar" src="" alt="Discord avatar" />
+          <div class="discord__meta">
+            <div class="discord__name" id="dc-name">—</div>
+            <div class="discord__user" id="dc-user">—</div>
+            <div class="discord__status"><span id="dc-dot" class="status-dot"></span><span id="dc-text">—</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--interactive" id="projects-card">
+        <h2 class="card__title"><i class="fa-solid fa-diagram-project"></i> مشاريعي</h2>
+        <div class="projects-empty">لا يوجد مشاريع حالياً</div>
+      </article>
+    </section>
+
+    <!-- Middle column: Skills -->
+    <section class="column">
+      <article class="card card--interactive">
+        <h2 class="card__title"><i class="fa-solid fa-code"></i> مهاراتي</h2>
+
+        <ul class="skills">
+          <li class="skill">
+            <span class="skill__label">🐍 Python</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:10%"></span></div>
+            <span class="skill__percent">10%</span>
+          </li>
+          <li class="skill">
+            <span class="skill__label">🌐 HTML</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:45%"></span></div>
+            <span class="skill__percent">45%</span>
+          </li>
+          <!-- The rest default to 0% -->
+          <li class="skill">
+            <span class="skill__label">🎨 CSS</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div>
+            <span class="skill__percent">0%</span>
+          </li>
+          <li class="skill">
+            <span class="skill__label">⚡ JavaScript</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div>
+            <span class="skill__percent">0%</span>
+          </li>
+          <li class="skill">
+            <span class="skill__label">☕ Java</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div>
+            <span class="skill__percent">0%</span>
+          </li>
+          <li class="skill">
+            <span class="skill__label">🐘 PHP</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div>
+            <span class="skill__percent">0%</span>
+          </li>
+          <li class="skill">
+            <span class="skill__label">🟦 C#</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div>
+            <span class="skill__percent">0%</span>
+          </li>
+          <li class="skill">
+            <span class="skill__label">🐍 Node.js</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div>
+            <span class="skill__percent">0%</span>
+          </li>
+        </ul>
+
+        <div id="more-skills" class="skills skills--hidden">
+          <li class="skill"><span class="skill__label">🧰 C/C++</span><div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div><span class="skill__percent">0%</span></li>
+          <li class="skill"><span class="skill__label">🐍 Django/Flask</span><div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div><span class="skill__percent">0%</span></li>
+          <li class="skill"><span class="skill__label">🗄️ SQL</span><div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div><span class="skill__percent">0%</span></li>
+          <li class="skill"><span class="skill__label">🧪 TypeScript</span><div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div><span class="skill__percent">0%</span></li>
+          <li class="skill"><span class="skill__label">💎 Ruby</span><div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div><span class="skill__percent">0%</span></li>
+          <li class="skill"><span class="skill__label">🧬 Rust</span><div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div><span class="skill__percent">0%</span></li>
+        </div>
+
+        <button id="toggle-skills" class="btn btn--ghost">Show more (+)</button>
+      </article>
+    </section>
+
+    <!-- Right column: Links -->
+    <section class="column">
+      <article class="card card--interactive">
+        <h2 class="card__title"><i class="fa-solid fa-share-nodes"></i> روابط</h2>
+        <div class="links">
+          <button class="link-btn" data-link="https://discord.gg/xS2EjBgbak"><i class="fa-brands fa-discord"></i> Discord</button>
+          <button class="link-btn" data-link="https://youtube.com/@YOUR_CHANNEL"><i class="fa-brands fa-youtube"></i> YouTube</button>
+          <button class="link-btn" data-link="https://x.com/YOUR_HANDLE"><i class="fa-brands fa-x-twitter"></i> Twitter</button>
+          <button class="link-btn" data-link="https://kick.com/YOUR_NAME"><i class="fa-solid fa-video"></i> Kick</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  
+  <footer class="site-footer">© 2025 Luther. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
