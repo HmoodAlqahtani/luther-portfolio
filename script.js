@@ -1,12 +1,12 @@
-// ===============
+// ===============================
 // Config
-// ===============
+// ===============================
 const DISCORD_USER_ID = "1073248316458012693"; // ضع هنا ID حسابك
 const LANYARD = `https://api.lanyard.rest/v1/users/${DISCORD_USER_ID}`;
 
-// ===============
+// ===============================
 // Helpers
-// ===============
+// ===============================
 function setText(id, val){ const el = document.getElementById(id); if(el) el.textContent = val; }
 function setSrc(id, val){ const el = document.getElementById(id); if(el) el.src = val; }
 function statusColor(p){
@@ -18,9 +18,9 @@ function statusColor(p){
   }
 }
 
-// ===============
+// ===============================
 // Discord presence
-// ===============
+// ===============================
 async function loadDiscord(){
   if(!DISCORD_USER_ID) return;
 
@@ -41,8 +41,8 @@ async function loadDiscord(){
 
     // name & username
     const display = d.global_name || d.display_name || d.username;
-    setText('dc-name', display); // الاسم أول شيء
-    setText('dc-user', d.username); // اليوزر بدون # والأرقام
+    setText('dc-name', display);
+    setText('dc-user', d.username);
 
     // status بالإنجليزي
     const mapText = { online:'Online', idle:'Idle', dnd:'Do Not Disturb', offline:'Offline' };
@@ -53,7 +53,7 @@ async function loadDiscord(){
     if(dot){
       dot.style.background = col;
       dot.style.color = col;
-      dot.style.boxShadow = `0 0 12px ${col}, inset 0 0 24px ${col}`; // توهج باهت جميل
+      dot.style.boxShadow = `0 0 12px ${col}, inset 0 0 24px ${col}`;
       dot.style.opacity = 0.9;
     }
 
@@ -68,9 +68,9 @@ async function loadDiscord(){
 loadDiscord();
 setInterval(loadDiscord, 30000);
 
-// ===============
+// ===============================
 // Links buttons
-// ===============
+// ===============================
 document.addEventListener('click', (e)=>{
   const btn = e.target.closest('.link-btn');
   if(!btn) return;
@@ -78,9 +78,9 @@ document.addEventListener('click', (e)=>{
   if(link) window.open(link, '_blank');
 });
 
-// ===============
+// ===============================
 // Toggle more skills
-// ===============
+// ===============================
 const toggleBtn = document.getElementById('toggle-skills');
 const moreSkills = document.getElementById('more-skills');
 if(toggleBtn && moreSkills){
@@ -89,4 +89,25 @@ if(toggleBtn && moreSkills){
     moreSkills.classList.toggle('skills--hidden');
     toggleBtn.textContent = hidden ? 'Show less (-)' : 'Show more (+)';
   });
+}
+
+// ===============================
+// Visitor Counter (LocalStorage - unique per device)
+// ===============================
+const visitorNumEl = document.getElementById('visitor-num');
+let totalVisitors = localStorage.getItem('totalVisitors');
+
+// زيادة العدد فقط إذا هذا الجهاز لم يزر الصفحة من قبل
+if (!localStorage.getItem('hasVisited')) {
+    totalVisitors = totalVisitors ? parseInt(totalVisitors) : 0;
+    totalVisitors++;
+    localStorage.setItem('totalVisitors', totalVisitors);
+    localStorage.setItem('hasVisited', 'true');
+} else {
+    totalVisitors = totalVisitors ? parseInt(totalVisitors) : 0;
+}
+
+// عرض العدد في الصفحة
+if(visitorNumEl){
+    visitorNumEl.textContent = totalVisitors;
 }
