@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <!-- Header -->
@@ -27,7 +28,7 @@
     <!-- Left column: Discord + Projects -->
     <section class="column">
       <article class="card card--interactive" id="discord-card" aria-live="polite">
-        <h2 class="card__title"><i class="fa-brands fa-discord"></i> ديسكورد</h2>
+        <h2 class="card__title"><i class="fa-brands fa-discord"></i>ديسكورد</h2>
         <div class="discord">
           <img id="dc-avatar" class="discord__avatar" src="" alt="Discord avatar" />
           <div class="discord__meta">
@@ -42,9 +43,20 @@
 
       <article class="card card--interactive" id="projects-card">
         <h2 class="card__title"><i class="fa-solid fa-diagram-project"></i> مشاريعي</h2>
-        <div class="projects-empty">لا يوجد مشاريع حالياً</div>
+        <div class="projects-empty">
+          
+
+          <article class="card card--interactive" id="projects-card">
+        <h1 class="card__title"><i class="fa-solid fa-diamond"></i>Patrick RP</h1>
+    
+        <button class="link-btn" data-link="https://discord.gg/HgSqdaQj4z"></i>Discord<i class="fa-brands fa-discord"></i></button>
       </article>
     </section>
+          
+        </div>
+      </article>
+    </section>
+    
 
     
 
@@ -74,8 +86,8 @@
           </li>
           <li class="skill">
             <span class="skill__label">⚡ JavaScript</span>
-            <div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div>
-            <span class="skill__percent">0%</span>
+            <div class="skill__bar"><span class="skill__fill" style="--val:12%"></span></div>
+            <span class="skill__percent">12%</span>
           </li>
           <li class="skill">
             <span class="skill__label">☕ Java</span>
@@ -108,7 +120,7 @@
           <li class="skill"><span class="skill__label">🧬 Rust</span><div class="skill__bar"><span class="skill__fill" style="--val:0%"></span></div><span class="skill__percent">0%</span></li>
         </div>
 
-        <button id="toggle-skills" class="btn btn--ghost">Show more (+)</button>
+        <button id="toggle-skills" class="btn btn--ghost">[+] Show more</button>
       </article>
     </section>
 
