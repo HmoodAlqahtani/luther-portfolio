@@ -24,7 +24,7 @@ body{
   margin:0;
   font-family:'Poppins','Cairo',system-ui,Segoe UI,Roboto,Arial,sans-serif;
   background:
-    radial-gradient(1200px 500px at 10% -20%, #0b1f36 0%, transparent 60%),
+    radial-gradient(1200px 5000px at 10% -20%, #0b1f36 0%, transparent 60%),
     radial-gradient(1000px 500px at 90% 120%, #0b1f36 0%, transparent 60%),
     linear-gradient(180deg, var(--bg), var(--bg2));
   color:#e6f4ff;
@@ -34,7 +34,7 @@ body{
 .site-header{
   display:flex;
   justify-content:center;
-  padding:28px 16px 10px;
+  padding:130px 16px 40px;
 }
 .hero{
   display:flex;
@@ -59,18 +59,18 @@ body{
 
 .card{
   background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)) , var(--card);
-  border-radius:18px;padding:16px;border:1px solid var(--border);
-  position:relative;isolation:isolate;box-shadow:0 10px 30px rgba(0,0,0,.25);
+  border-radius:13px;padding:16px;border:1px solid var(--border);
+  position:relative;isolation:isolate;box-shadow:0 50px 30px rgba(0,0,0,.25);
 }
 .card--interactive{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
 .card--interactive:hover{
   transform:translateY(-4px);
   border-color:var(--accent-2);
-  box-shadow:0 12px 40px rgba(56,189,248,.12);
+  box-shadow:0 19px 40px rgba(56,189,248,.12);
 }
 .card__title{
   margin:0 0 12px;font-size:18px;color:var(--muted);
-  display:flex;align-items:center;gap:8px
+  display:flex;align-items:center;gap:10px
 }
 
 /* Discord block */
@@ -81,9 +81,9 @@ body{
   box-shadow:0 0 18px rgba(56,189,248,.25);
   background:#0b1f36;
 }
-.discord__meta{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.discord__meta{display:flex;flex-direction:column;gap:5px;align-items:flex-start}
 .discord__name{font-size:18px;font-weight:700}
-.discord__user{font-size:14px;opacity:.85}
+.discord__user{font-size:13px;opacity:.85}
 .discord__status{font-size:12px;display:flex;gap:8px;align-items:center}
 .status-dot{
   width:12px;height:12px;border-radius:999px;display:inline-block;
@@ -107,7 +107,7 @@ body{
 .skills--hidden{display:none}
 
 .btn{
-  cursor:pointer;border:none;border-radius:10px;padding:10px 14px;
+  cursor:pointer;border:none;border-radius:5px;padding:5px 10px;
   font-weight:600;background:var(--btn);color:white;
   transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
   box-shadow:0 6px 16px rgba(0,0,0,.25), inset 0 0 0 1px #0c2b4a;
@@ -128,6 +128,7 @@ body{
 .link-btn i{font-size:18px;opacity:.95}
 .link-btn:hover{transform:translateY(-2px);border-color:var(--accent-2);box-shadow:0 10px 26px rgba(56,189,248,.12)}
 
+
 /* Footer */
 .site-footer{
   max-width:1200px;margin:16px auto 26px;padding:0 16px;
@@ -140,4 +141,13 @@ body{
   .hero{flex-direction:column;align-items:center;text-align:center}
   .hero__image{width:128px;height:128px}
   .discord{align-items:flex-start}
+}
+.small-btn {
+  padding: 6px 12px;     /* حجم أصغر */
+  font-size: 13px;       /* تصغير الخط */
+  border-radius: 4px;    /* زوايا أنعم */
+}
+
+.small-btn i {
+  font-size: 14px;       /* أيقونة أصغر */
 }
